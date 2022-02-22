@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticated, DjangoModelPermissions
 from rest_framework.authentication import BaseAuthentication
 from rest_framework import filters
 from django_filters.rest_framework import DjangoFilterBackend
+
 class BlogViewSet(viewsets.ModelViewSet):
    queryset = Blog.objects.all()
    serializer_class = BlogSerializer 
@@ -15,3 +16,7 @@ class BlogViewSet(viewsets.ModelViewSet):
    ordering = ['name']
    search_fields = ['name']
 #    permission_classes = [IsAuthenticated]
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer

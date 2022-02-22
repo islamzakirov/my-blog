@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'knox',
     'pro',
-    'account'
+    'account',
+    'taggit'
 ]
 
 MIDDLEWARE = [

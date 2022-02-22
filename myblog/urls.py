@@ -41,6 +41,7 @@ schema_view = get_schema_view(
 
 router = DefaultRouter()
 router.register('Blog', BlogViewSet)
+router.register('category', CategoryViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
